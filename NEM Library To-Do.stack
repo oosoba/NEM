@@ -1,0 +1,27 @@
+- Homogenize the GmmNEM noisy vs non-noisy code!
+
+- non-volatile process backup for SR simulation functions [done]
+	- simulation recovery procedures in case of crashes [still not working]
+	- Rename old results b4 saving new final results log or date "-Final" results logs. [Done]
+
+- Multi-Dim MM-EM code [done: ND-GMM-NEM]
+
+- (G/C)MM-EM models: Set up "hierarchical" estimation for full parameters with sigma estimation last. So we use NEM-condition using best current estimate of mean/location parameters. Compare to blind full-parameter estimation. [Done]
+	- NECM is wayyy faster than EM for full-parameter
+	- NECM is moderately faster than ECM
+	- The update-law version is the fastest and least pathological (**)
+
+- Need multi-dimensional MM-EM models
+	- Also need to implement Classification-EM.
+		- Consider ANOVA final conditioning step
+		- MATLAB translation of multi-dimensional MM-EM Mathematica library for Speech work.
+
+- Log-Convex Gamma NEM with Multiplicative Noise may give better results than the Additive Noise version. [Done: slightly but not necessarily better]
+
+- Look into Mathematica's built-in ML estimation functions. Consider extracting intermediate steps using Reap-Sow constructs. [Not iterative procedure]
+
+- Issue: Speed logs showing zeros. Speed (# of iters) cannot be zero. Suspect data concurrency issues in parallelizer. [Symptom Fix Done]
+
+- Recovery management error: Restart after "convstop" management [done] (fixed with circular buffer)
+
+- Accept/Reject noise sampling for conditional noise EM procedures [done: deprecated, bad idea?]
