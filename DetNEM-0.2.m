@@ -105,7 +105,7 @@ Begin["`GmmEM`"];
 
 
 (* ::Subsubsection::Closed:: *)
-(*Auxillary Functions*)
+(*Auxiliary Functions*)
 
 
 (* ::Text:: *)
@@ -376,7 +376,7 @@ If[\[Sigma]n!=0,
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Multiplicative Noise GMM-EM*)
 
 
